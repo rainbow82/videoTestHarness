@@ -1,5 +1,6 @@
 let testName, testUrl = '';
 const video = document.getElementById("video");
+const TIME_ADJUSTMENT = 10;
 
 const load = () => {
   fetchTests();
@@ -67,6 +68,14 @@ const createListItems = (testName, testUrl) => {
 
   const pauseVideo = () => {
     video.pause();
+  }
+
+  const fastForward = () => {
+    video.currentTime = video.currentTime + TIME_ADJUSTMENT;
+  }
+
+  const rewind = () => {
+    video.currentTime = video.currentTime - TIME_ADJUSTMENT;
   }
 
 
