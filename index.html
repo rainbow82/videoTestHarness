@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body onload="load()">
+    <div class="container">
+      <div>
+        <h3>Video Tests</h3>
+        <p>Select a test to run</p>
+        <ul id='testList'>
+        </ul>
+      </div>
+      <div class='videoContainer'>
+        <div class="video">
+          <video
+            id='video'
+            width='500'
+            height='400'
+            src='http://vpe-static.bamgrid.com/sample-files/take-home-exam/sample-mp4-file.mp4'
+            controls
+          />
+        </div>
+        <div class='controlBar'><h1>Play</h1><h1>Seek</h1></div>
+      </div>
+    </div>
+
+  <script src="scripts.js"></script>
+  </body>
+</html>

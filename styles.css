@@ -1,0 +1,75 @@
+
+body {
+  background-color: #f1f0f0;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 25px;
+}
+
+.testList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  width: 50%;
+  height: 40px;
+  position: relative;
+  border-bottom: 2px solid steelblue;
+  padding-top: 20px;
+}
+
+button {
+  background-color: #a184ad;
+  width: 100px;
+  height: 2rem;
+  position: absolute;
+  right: -10px;
+  margin-top: -7px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 12px;
+  border: none;
+}
+
+button:visited {
+  background-color: mediumseagreen;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  background-color:green;
+  border-radius: 12px;
+  border: none;
+}
+
+.videoContainer {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.video {
+  grid-area: 1/1/1/1;
+}
+
+video:focus {
+  outline: none;
+}
+
+.controlBar{
+  background-color: grey;
+  height: 50px;
+  width: 500px;
+  margin-top: 50px;
+}
+
+
