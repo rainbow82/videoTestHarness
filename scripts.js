@@ -61,6 +61,14 @@ const createListItems = (testName, testUrl) => {
 
   }
 
+  const playVideo = () => {
+    video.play();
+  }
+
+  const pauseVideo = () => {
+    video.pause();
+  }
+
 
 
 

@@ -39,7 +39,7 @@ button {
 }
 
 button:visited {
-  background-color: mediumseagreen;
+  background-color: #3cb371;
 }
 
 button:focus {
@@ -66,10 +66,15 @@ video:focus {
 }
 
 .controlBar{
-  background-color: grey;
+  display: inline-grid;
+  grid-template-columns: repeat(12, 1fr);
+  background-color: #cfced3;
   height: 50px;
   width: 500px;
   margin-top: 50px;
+  border-radius: 12px;
 }
 
-
+.playButton, .pauseButton {
+  margin: 10px;
+}

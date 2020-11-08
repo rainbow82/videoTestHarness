@@ -23,7 +23,34 @@
             controls
           />
         </div>
-        <div class='controlBar'><h1>Play</h1><h1>Seek</h1></div>
+        <div class='controlBar'>
+          <div id='playButton' class='playButton' onclick='playVideo()'>
+            <svg xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              height="32px"
+              style="enable-background:new 0 0 32 32;"
+              version="1.1"
+              viewBox="0 0 32 32"
+              width="32px"
+              xml:space="preserve">
+                <g id="Layer_1"/><g id="play_x5F_alt">
+                  <path d="M16,0C7.164,0,0,7.164,0,16s7.164,16,16,16s16-7.164,16-16S24.836,0,16,0z M10,24V8l16.008,8L10,24z" style="fill:#3cb371;"/>
+                </g>
+            </svg>
+          </div>
+          <div id='pauseButton' class='pauseButton' onclick='pauseVideo()'>
+            <svg xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="32px"
+              height="32px"
+              viewBox="0 0 32 32"
+              version="1.1">
+                <g id="surface1">
+                  <path style=" stroke:none;fill-rule:nonzero;fill:#3cb371;fill-opacity:1;" d="M 16 0 C 7.164062 0 0 7.164062 0 16 C 0 24.835938 7.164062 32 16 32 C 24.835938 32 32 24.835938 32 16 C 32 7.164062 24.839844 0 16 0 Z M 13.496094 20.929688 C 13.496094 21.921875 12.691406 22.722656 11.699219 22.722656 C 10.707031 22.722656 9.90625 21.921875 9.90625 20.929688 L 9.90625 11.015625 C 9.90625 10.027344 10.710938 9.222656 11.699219 9.222656 C 12.6875 9.222656 13.496094 10.027344 13.496094 11.015625 Z M 21.828125 20.929688 C 21.828125 21.921875 21.019531 22.722656 20.03125 22.722656 C 19.042969 22.722656 18.238281 21.921875 18.238281 20.929688 L 18.238281 11.015625 C 18.238281 10.027344 19.042969 9.222656 20.03125 9.222656 C 21.019531 9.222656 21.828125 10.027344 21.828125 11.015625 Z M 21.828125 20.929688 "/>
+                </g>
+            </svg>
+          </div>
+        </div>
       </div>
     </div>
 
