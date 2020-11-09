@@ -78,6 +78,18 @@ const createListItems = (testName, testUrl) => {
     video.currentTime = video.currentTime - TIME_ADJUSTMENT;
   }
 
+  const desiredTime = (ele) => {
+    if(event.key === 'Enter') {
+      if(isNaN(ele.value)){
+        video.pause();
+        alert('Input must be a number');
+        video.play();
+      }else {
+        console.log(ele.value);
+        video.currentTime = ele.value;
+      }
+    }
+  }
 
 
 
