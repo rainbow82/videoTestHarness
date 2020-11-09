@@ -4,20 +4,24 @@ const TIME_ADJUSTMENT = 10;
 
 const load = () => {
   fetchTests();
-  document.getElementById('enteredTime').value = '';
+  clearValueBox();
 }
 
 //using https://cors-anywhere.herokuapp.com to bypass Cross Origin Header error
 const fetchTests = async() => {
   const result = await fetch('https://cors-anywhere.herokuapp.com/https://vpe-static.bamgrid.com/sample-files/take-home-exam/test-streams.json');
-    if (result.ok) {
-      const tests = await result.json();
-      console.log(tests);
+    try {
+      if (result.ok) {
+        const tests = await result.json();
+        console.log(tests);
 
-      getTest(tests);
+        getTest(tests);
 
-    } else {
-      console.log(result);
+      } else {
+        console.log(result);
+      }
+    } catch(err) {
+      console.log(err);
     }
   }
 
@@ -59,6 +63,20 @@ const createListItems = (testName, testUrl) => {
     video.pause();
   }
 
+  const mute = () => {
+    video.muted = true;
+    document.getElementById('noVolume').style.display = 'none';
+    document.getElementById('volume').style.display = 'inline';
+    document.getElementById('soundText').innerHTML = 'Unmute';
+  }
+
+  const unmute = () => {
+    video.muted = false;
+    document.getElementById('noVolume').style.display = 'inline';
+    document.getElementById('volume').style.display = 'none';
+    document.getElementById('soundText').innerHTML = 'Mute';
+  }
+
   const fastForward = () => {
     video.currentTime = video.currentTime + TIME_ADJUSTMENT;
   }
@@ -72,11 +90,10 @@ const createListItems = (testName, testUrl) => {
       if(isNaN(ele.value)){
         video.pause();
         alert('Please enter a time in seconds. \n Example 1: 20 \n Example 2: 120');
-        document.getElementById('enteredTime').value = '';
+        clearValueBox();
         video.play();
       }else {
-        console.log(ele.value);
-        video.currentTime = ele.value;
+        clearValueBox();
       }
     }
   }
@@ -86,11 +103,16 @@ const createListItems = (testName, testUrl) => {
     if(isNaN(enteredTime)) {
       video.pause();
       alert('Please enter a time in seconds. \n Example 1: 20 \n Example 2: 120');
-      document.getElementById('enteredTime').value = '';
+      clearValueBox();
       video.play();
     }else {
       video.currentTime = enteredTime;
+      clearValueBox();
     }
+  }
+
+  const clearValueBox = () => {
+    document.getElementById('enteredTime').value = '';
   }
 
 
