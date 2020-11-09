@@ -8,6 +8,10 @@ body {
   margin: 25px;
 }
 
+.testHeader {
+  margin-left: 40px;
+}
+
 .testList {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -86,4 +90,11 @@ video:focus {
 #enteredTime {
   padding: 5px;
   width: 80px;
+}
+
+.submitButton {
+  position: relative;
+  margin-top: -1px;
+  right: 0;
+  left: -10px;
 }

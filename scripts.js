@@ -47,17 +47,6 @@ const createListItems = (testName, testUrl) => {
       video.setAttribute("src", testUrl);
       video.load();
       video.play();
-
-    });
-    // buttonClicked();
-
-  }
-
-  //this is changing the last button color after click
-  const buttonClicked = () => {
-    document.getElementById(testUrl).addEventListener("click", function() {
-      alert('button clicked' + testUrl);
-      document.getElementById(testUrl).style.backgroundColor = '#729a71';
     });
 
   }
@@ -89,6 +78,18 @@ const createListItems = (testName, testUrl) => {
         video.currentTime = ele.value;
       }
     }
+  }
+
+  const desiredTimeSubmit = () => {
+    const enteredTime = document.getElementById("enteredTime").value;
+    if(isNaN(enteredTime)) {
+      video.pause();
+      alert('Input must be a number');
+      video.play();
+    }else {
+      video.currentTime = enteredTime;
+    }
+
   }
 
 

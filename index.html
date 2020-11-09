@@ -8,8 +8,7 @@
   <body onload="load()">
     <div class="container">
       <div>
-        <h3>Video Tests</h3>
-        <p>Select a test to run</p>
+        <h3 class='testHeader'>Video Tests</h3>
         <ul id='testList'>
         </ul>
       </div>
@@ -76,6 +75,9 @@
           </div>
           <div class='controlBarItem'>
             <input id='enteredTime' type="text" placeholder='Desired Time' onkeydown='desiredTime(this)'/>
+          </div>
+          <div class='controlBarItem'>
+            <button id='submitButton' class='submitButton' onclick="desiredTimeSubmit()">Submit</button>
           </div>
         </div>
       </div>
