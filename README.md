@@ -7,6 +7,7 @@
   - play
   - pause
   - mute/unmute
-  - seek by 10 seconds, or by custom amount
+  - seek by 10 seconds
+  - seek by custom amount
 
 
