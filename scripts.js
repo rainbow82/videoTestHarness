@@ -43,7 +43,6 @@ const createListItems = (testName, testUrl) => {
 
 
     document.getElementById(testUrl).addEventListener("click", function() {
-      alert('button clicked' + testUrl);
       document.getElementById(testUrl).style.backgroundColor = '#729a71';
       video.setAttribute("src", testUrl);
       video.load();
@@ -72,7 +71,8 @@ const createListItems = (testName, testUrl) => {
     if(event.key === 'Enter') {
       if(isNaN(ele.value)){
         video.pause();
-        alert('Input must be a number');
+        alert('Please enter a time in seconds. \n Example 1: 20 \n Example 2: 120');
+        document.getElementById('enteredTime').value = '';
         video.play();
       }else {
         console.log(ele.value);
@@ -85,7 +85,8 @@ const createListItems = (testName, testUrl) => {
     const enteredTime = document.getElementById("enteredTime").value;
     if(isNaN(enteredTime)) {
       video.pause();
-      alert('Input must be a number');
+      alert('Please enter a time in seconds. \n Example 1: 20 \n Example 2: 120');
+      document.getElementById('enteredTime').value = '';
       video.play();
     }else {
       video.currentTime = enteredTime;
