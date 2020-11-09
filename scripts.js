@@ -4,6 +4,7 @@ const TIME_ADJUSTMENT = 10;
 
 const load = () => {
   fetchTests();
+  document.getElementById('enteredTime').value = '';
 }
 
 //using https://cors-anywhere.herokuapp.com to bypass Cross Origin Header error
@@ -89,7 +90,6 @@ const createListItems = (testName, testUrl) => {
     }else {
       video.currentTime = enteredTime;
     }
-
   }
 
 
