@@ -72,6 +72,19 @@ const createListItems = (testName, testUrl) => {
     document.getElementById('soundText').innerHTML = 'Mute';
   }
 
+  video.addEventListener('volumechange', (event) => {
+    console.log('The volume changed.');
+    if (video.muted) {
+      document.getElementById('noVolume').style.display = 'none';
+      document.getElementById('volume').style.display = 'inline';
+      document.getElementById('soundText').innerHTML = 'Unmute';
+    } else {
+      document.getElementById('noVolume').style.display = 'inline';
+      document.getElementById('volume').style.display = 'none';
+      document.getElementById('soundText').innerHTML = 'Mute';
+    }
+  });
+
   const fastForward = () => {
     video.currentTime = video.currentTime + TIME_ADJUSTMENT;
   }
