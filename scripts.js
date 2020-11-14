@@ -2,11 +2,6 @@ let testName, testUrl = '';
 const video = document.getElementById("video");
 const TIME_ADJUSTMENT = 10;
 
-const load = () => {
-  fetchTests();
-  clearValueBox();
-}
-
 //using https://cors-anywhere.herokuapp.com to bypass Cross Origin Header error
 const fetchTests = async() => {
   const result = await fetch('https://cors-anywhere.herokuapp.com/https://vpe-static.bamgrid.com/sample-files/take-home-exam/test-streams.json');
@@ -116,5 +111,9 @@ const createListItems = (testName, testUrl) => {
   }
 
 
+  (()=> {
+    fetchTests();
+    clearValueBox();
+  })()
 
 
