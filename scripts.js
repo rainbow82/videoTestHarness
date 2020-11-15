@@ -24,7 +24,6 @@ const getTest = (tests) => {
   for (let index = 0; index < tests.streams.length; index++) {
     testName = tests.streams[index].title;
     testUrl = tests.streams[index].url;
-    console.log('test ' + testName, testUrl);
     createListItems(testName, testUrl);
   }
 }
@@ -39,7 +38,6 @@ const createListItems = (testName, testUrl) => {
     button.setAttribute("id", testUrl);
     button.appendChild(buttonText);
     document.getElementById("testList").appendChild(node);
-
 
     document.getElementById(testUrl).addEventListener("click", function() {
       document.getElementById(testUrl).style.backgroundColor = '#729a71';
