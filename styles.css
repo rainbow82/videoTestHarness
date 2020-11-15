@@ -85,11 +85,11 @@ video:focus {
   margin: 10px;
 }
 
-#rewind {
+.rewind {
   transform: scaleX(-1);
 }
 
-#enteredTime {
+.enteredTime {
   padding: 5px;
   width: 80px;
 }
@@ -145,6 +145,6 @@ video:focus {
   transform: scaleX(-1);
 }
 
-#volume {
+.volume {
   display: none;
 }
